@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Creador de Cartas de Pokémon</title>
+        <link rel="stylesheet" href="flow.css">
+        <script src="magia.js" defer></script>
+    <script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-eforma.js"></script><link rel="stylesheet" type="text/css" href="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/cookies/cookies.css"/><script  type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/cookies/cookies.js"></script><script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/cookies/cookies-html.js"></script></head>
+    <body>
+        <div class="formulario">
+            <h1>Creador de Cartas Pokémon</h1>
+            <form id="pokemon-form">
+                <div class="formDatosBasicos">
+                    <label for="nombre">Nombre: </label>
+                    <input type="text" id="nombre" name="nombre" required><br>
+                    <label for="imagen">Imagen: </label>
+                    <input type="file" id="imagen" name="imagen" accept="image/*" required><br>
+                    <label for="fase">Fase evolutiva: </label>
+                    <select id="fase" name="fase" required>
+                        <option value="BÁSICO">BÁSICO</option>
+                        <option value="FASE 2">FASE 2</option>
+                        <option value="FASE 3">FASE 3</option>
+                        <option value="MEGAEVOLUCIÓN">MEGAEVOLUCIÓN</option>
+                    </select><br>
+                    <label for="tipo">Tipo: </label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="fuego">Fuego</option>
+                        <option value="agua">Agua</option>
+                        <option value="planta">Planta</option>
+                        <option value="electrico">Eléctrico</option>
+                        <option value="normal">Normal</option>
+                        <option value="fantasma">Fantasma</option>
+                        <option value="veneno">Veneno</option>
+                        <option value="acero">Acero</option>
+                        <option value="volador">Volador</option>
+                        <option value="dragon">Dragón</option>
+                        <option value="hada">Hada</option>
+                        <option value="roca">Roca</option>
+                        <option value="tierra">Tierra</option>
+                        <option value="siniestro">Siniestro</option>
+                        <option value="lucha">Lucha</option>
+                        <option value="psiquico">Psíquico</option>
+                        <option value="hielo">Hielo</option>
+                        <option value="bicho">Bicho</option>
+                    </select><br>
+                    <!--Una elección de tipos que al final no usé.
+                    <div class="electipos">
+                        <div>
+                        <input type="radio" id="tipo" name="tipo" value="fuego" required>
+                        <label for="fuego">Fuego</label>
+                        </div>
+                        <div>
+                        <input type="radio" id="tipo" name="tipo" value="agua" required>
+                        <label for="agua">Agua</label>
+                        </div>
+                        <div>
+                        <input type="radio" id="tipo" name="tipo" value="planta" required>
+                        <label for="planta">Planta</label>
+                        </div>
+                        <div>
+                        <input type="radio" id="tipo" name="tipo" value="electrico" required>
+                        <label for="electrico">Eléctrico</label>
+                        </div>
+                        <div>
+                        <input type="radio" id="tipo" name="tipo" value="roca" required>
+                        <label for="roca">Roca</label>
+                        </div>
+                        <div>
+                        <input type="radio" id="tipo" name="tipo" value="hielo" required>
+                        <label for="hielo">Hielo</label>
+                        </div>
+                        <div>
+                        <input type="radio" id="tipo" name="tipo" value="normal" required>
+                        <label for="normal">Normal</label>
+                        </div>
+                        <div>
+                        <input type="radio" id="tipo" name="tipo" value="lucha" required>
+                        <label for="lucha">Lucha</label>
+                        </div>
+                        <div>
+                        <input type="radio" id="tipo" name="tipo" value="psiquico" required>
+                        <label for="psiquico">Psíquico</label>
+                        </div>
+                        <div>
+                        <input type="radio" id="tipo" name="tipo" value="dragon" required>
+                        <label for="dragon">Dragón</label>
+                        </div>
+                        <div>
+                        <input type="radio" id="tipo" name="tipo" value="hada" required>
+                        <label for="hada">Hada</label>
+                        </div>
+                        <div>
+                        <input type="radio" id="tipo" name="tipo" value="fantasma" required>
+                        <label for="fantasma">Fantasma</label>
+                        </div>
+                        <div>
+                        <input type="radio" id="tipo" name="tipo" value="siniestro" required>
+                        <label for="siniestro">Siniestro</label>
+                        </div>
+                        <div>
+                        <input type="radio" id="tipo" name="tipo" value="volador" required>
+                        <label for="volador">Volador</label>
+                        </div>
+                        <div>
+                        <input type="radio" id="tipo" name="tipo" value="bicho" required>
+                        <label for="bicho">bicho</label>
+                        </div>
+                        <div>
+                        <input type="radio" id="tipo" name="tipo" value="tierra" required>
+                        <label for="tierra">Tierra</label>
+                        </div>
+                        <div>
+                        <input type="radio" id="tipo" name="tipo" value="acero" required>
+                        <label for="acero">Acero</label>
+                        </div>
+                        <div>
+                        <input type="radio" id="tipo" name="tipo" value="veneno" required>
+                        <label for="veneno">Veneno</label>
+                        </div>
+                    </div><br><br>-->
+                    <label for="hp">Puntos de Vida (PS): </label>
+                    <input type="number" id="hp" name="hp" required><br>
+                </div><br>
+
+                <div class="formAtaques">
+                    <label for="ataque1">Primer ataque: </label>
+                    <input type="text" id="ataque1" name="ataque1" required><br>
+                    <label for="desc1">Descripción:</label>
+                    <textarea id="desc1" name="desc1" rows="3" cols="50"></textarea><br>
+                    <label for="dano1">Daño: </label>
+                    <input type="number" id="dano1" name="dano1" required><br><br>
+                    <label for="ataque2">Segundo ataque: </label>
+                    <input type="text" id="ataque2" name="ataque2" required><br>
+                    <label for="desc2">Descripción:</label>
+                    <textarea id="desc2" name="desc2" rows="3" cols="50"></textarea><br>
+                    <label for="dano2">Daño: </label>
+                    <input type="number" id="dano2" name="dano2" required><br>
+                </div><br>
+
+                <div class="formDebResRet">
+                    <label for="debilidadCoste">Multiplicador de debilidad: </label>
+                    <input type="number" id="debilidadCoste" name="debilidadCoste" required><br>
+                    <label for="resitenciaCoste">Daño resistible: </label>
+                    <input type="number" id="resistenciaCoste" name="resistenciaCoste" required><br>
+                    <label for="retirada">Coste de retirada: </label>
+                    <input type="number" id="retirada" name="retirada" required><br>
+                </div><br>
+                
+                <input type="submit" value="Crear Carta">
+
+                <input type="reset" value="Reestablecer">
+            </form>
+            </div>
+            <div id="pokemon-card-container"></div>
+        </body>
+</html>

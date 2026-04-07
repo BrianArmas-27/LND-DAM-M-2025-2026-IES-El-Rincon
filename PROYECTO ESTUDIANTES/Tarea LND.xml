@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo>
+    <producto>
+        <nombre>Repetidor TP-Link TL-WA850RE</nombre> <!--Sacado de Leroy Merlín-->
+        <descripcion>Repetidor de red wifi, para aumentar el rango de las señales wifi</descripcion>
+        <precio>15,99€</precio>
+        <caracteristicas>
+            <caracteristica>
+                <nombre>Transmisión de datos (en Mbps)</nombre>
+                <valor>300</valor>
+            </caracteristica>
+            <caracteristica>
+                <nombre>Banda de frecuencia (en MHz)</nombre>
+                <valor>2400</valor>
+            </caracteristica>
+            <caracteristica>
+                <nombre>Alimentación (en V)</nombre>
+                <valor>220</valor>
+            </caracteristica>
+            <caracteristica>
+                <nombre>Consumo (en W)</nombre>
+                <valor>8218</valor>
+            </caracteristica>
+        </caracteristicas>
+    </producto>
+    <producto>
+        <nombre>the box CL 108 Top MK II</nombre> <!--Sacado de Thomann-->
+        <descripcion>Altavoces satélites de gran calidad</descripcion>
+        <precio>229€</precio>
+        <caracteristicas>
+            <caracteristica>
+                <nombre>Potencia</nombre>
+                <valor>150 W RMS</valor>
+            </caracteristica>
+            <caracteristica>
+                <nombre>Dispersión</nombre>
+                <valor>90º x 60º</valor>
+            </caracteristica>
+            <caracteristica>
+                <nombre>Dimensiones</nombre>
+                <valor>280 x 415 x 250mm</valor>
+            </caracteristica>
+            <caracteristica>
+                <nombre>Peso</nombre>
+                <valor>9,00kg (18,00kg la pareja)</valor>
+            </caracteristica>
+        </caracteristicas>
+    </producto>
+</catalogo>

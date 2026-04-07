@@ -1,0 +1,32 @@
+body{
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+label{ 
+    display: block;
+    margin-top: 10px;
+}
+input{ 
+    width: 100%; 
+    padding: 5px; 
+    margin-top: 5px; 
+}
+button{ 
+    margin-top: 20px; 
+    padding: 10px; 
+}
+#xmlOutput{ 
+    width: 100%; 
+    margin-top: 20px; 
+}
+#clientesList{ 
+    margin-top: 20px; 
+}
+.cliente-item{ 
+    background-color: #f0f0f0; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    border-radius: 5px; 
+}

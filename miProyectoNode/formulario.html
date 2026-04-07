@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Formulario</title>
+    </head>
+    <body>
+        <h1 align="center">Formulario Básico</h1>
+        <form action="http://192.168.223.216:3000/submit" method="post" width="50px">
+            <fieldset style="width:50%; margin:auto">
+                <legend>Formulario</legend>
+                <label for="nombre">Nombre <input type="text" id="nombre" name="nombre" required></label><br><br>
+                <label for="email">Correo electónico <input id="email" type="email" name="email" required></label><br><br>
+                <label for="mensaje">Mensaje <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea></label><br><br>
+                <input type="submit" value="Enviar">
+            </fieldset>
+        </form>
+    </body>
+</html>

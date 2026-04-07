@@ -1,0 +1,95 @@
+body
+{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height:100vh;
+    background-color:#f0f0f0;
+}
+
+/* @keyframes spin
+{
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes hover
+{
+    0% { transform: translate(3px, 1px) skew(0deg,1500deg);}
+    10% { transform: translate(-1px, -3px);}
+    20% { transform: translate(0px, 2px)}
+    30% {transform: translate(-3px, 0px);}
+    40% { transform: translate(1px, -3px) skew(0deg,0deg);}
+    50% {transform: translate(0px, 0px) skew(1500deg,0deg);}
+    60% {transform: translate(3px, 0px);}
+    70% { transform: translate(1px, 2px);}
+    80% { transform: translate(-1px, -2px);}
+    90% {transform: translate(3px, 0px);}
+    100% {transform: translate(1px, -3px) skew(0deg,0deg);}
+    10%, 90%{transform: translate3d(-1px, 0, 0) rotate(-15deg);}
+    20%, 80% {transform: translate3d(2px, 0, 0) rotate(15deg);}
+    30%, 50%, 70%{transform: translate3d(-4px, 0, 0) rotate(-15deg);}
+    40%, 60%{transform: translate3d(4px, 0, 0)  rotate(15deg);}
+} */
+
+@keyframes bounce {
+    0% { transform:translateY(0%); }
+    80% { transform:translateY(-15%); }
+    90% { transform:translateY(0%); }
+    95% { transform:translateY(-7%); }
+    97% { transform:translateY(0%); }
+    99% { transform:translateY(-3%); }
+    100% { transform:translateY(0); }
+}
+.tablero
+{
+    display:grid;
+    grid-template-columns: repeat(8,60px);
+    grid-template-rows: repeat(8,60px);
+    border:4px solid #5c5c5c;
+}
+.celda
+{
+    width: 60px;
+    height:60px;
+}
+.negro
+{
+    background-color:#000000;
+}
+.blanco
+{
+    background-color:#810000;
+}
+.ficha
+{
+    text-align: center;
+    font-size:50px;
+    cursor:pointer;
+    user-select: none;   
+}
+.ficha:hover{
+    animation: bounce 0.75s linear 0s;
+}
+.fichanegra
+{
+    color:red;
+}
+.fichablanca
+{
+    color:white;
+}
+.fichadev
+{
+    font-family: wingdings;
+}
+.seleccion
+{
+    animation: idle 0.001s linear 0s infinite alternate-reverse;
+    font-weight: bolder;
+    background: radial-gradient(rgba(255, 255, 0, 0.603),transparent,transparent)
+} 

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca_musical>
+    <cancion id="19795561">
+        <titulo>Angelito</titulo>
+        <artista>
+            <nombre>Herb Alpert &amp; The Tijuana Brass</nombre>
+            <pais_origen>Estados Unidos</pais_origen>
+            <genero_principal>Jazz</genero_principal>
+        </artista>
+        <album>South of the Border</album>
+        <ano_lanzamiento>1964</ano_lanzamiento>
+        <duracion>142</duracion>
+        <genero>Jazz</genero>
+    </cancion>
+    <cancion id="19998828">
+        <titulo>Luta e Brinca</titulo>
+        <artista>
+            <nombre>Meste Barrao</nombre>
+            <pais_origen>Brasil</pais_origen>
+            <genero_principal>Capoeira</genero_principal>
+        </artista>
+        <album>Grupo Axé Capoeira, Vol. IV</album>
+        <ano_lanzamiento>2004</ano_lanzamiento>
+        <duracion>173</duracion>
+        <genero>Otros</genero>
+    </cancion>
+    <cancion id="78910203">
+        <titulo>November</titulo>
+        <artista>
+            <nombre>Tyler, The Creator</nombre>
+            <pais_origen>Estados Unidos</pais_origen>
+            <genero_principal>Hip-Hop</genero_principal>
+        </artista>
+        <album>Flower Boy</album>
+        <ano_lanzamiento>2017</ano_lanzamiento>
+        <duracion>225</duracion>
+        <genero>Hip-Hop</genero>
+    </cancion>
+    <cancion id="77789103">
+        <titulo>Blood and Thunder</titulo>
+        <artista>
+            <nombre>Mastodon</nombre>
+            <pais_origen>Estados Unidos</pais_origen>
+            <genero_principal>Heavy Metal</genero_principal>
+        </artista>
+        <album>Leviathan</album>
+        <ano_lanzamiento>2004</ano_lanzamiento>
+        <duracion>228</duracion>
+        <genero>Otros</genero>
+    </cancion>
+    <cancion id="09171244">
+        <titulo>Runaway</titulo>
+        <artista>
+            <nombre>Kanye West</nombre>
+            <pais_origen>Estados Unidos</pais_origen>
+            <genero_principal>Rap/Hip-Hop</genero_principal>
+        </artista>
+        <album>My Beautiful Dark Twisted Fantasy</album>
+        <ano_lanzamiento>2010</ano_lanzamiento>
+        <duracion>547</duracion>
+        <genero>Hip-Hop</genero>
+    </cancion>
+    <cancion id="34317488">
+        <titulo>Explorers</titulo>
+        <artista>
+            <nombre>Hinkik</nombre>
+            <pais_origen>Japón</pais_origen>
+            <genero_principal>Electrónica</genero_principal>
+        </artista>
+        <album>Explorers</album>
+        <ano_lanzamiento>2023</ano_lanzamiento>
+        <duracion>265</duracion>
+        <genero>Electrónica</genero>
+    </cancion>
+    <listas>
+        <lista duracionTotal="1580">
+            <titulo>Todas las canciones</titulo>
+            <descripcion>Todas las canciones dentro de la biblioteca</descripcion>
+            <canciones>
+                <cancionlista>19795561</cancionlista>
+                <cancionlista>19998828</cancionlista>
+                <cancionlista>78910203</cancionlista>
+                <cancionlista>77789103</cancionlista>
+                <cancionlista>09171244</cancionlista>
+                <cancionlista>34317488</cancionlista>
+            </canciones>
+        </lista>
+        <lista duracionTotal="945">
+            <titulo>Favoritos</titulo>
+            <descripcion>Canciones a que le has dado me gusta</descripcion>
+            <canciones>
+                <cancionlista>09171244</cancionlista>
+                <cancionlista>78910203</cancionlista>
+                <cancionlista>19998828</cancionlista>
+            </canciones>
+        </lista>
+    </listas>
+</biblioteca_musical>

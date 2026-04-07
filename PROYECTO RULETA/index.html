@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ruleta de tareas</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="flow.css"> 
+    </head>
+    <body>
+        <main class="contenedorJuego">
+            <!--Lo que sale arriba del todo-->
+            <header class="tituloJuego">
+                <h1>Ruleta de las tareas</h1>
+                <p>¿No sabes qué hacer hoy? Gira la ruleta</p>
+            </header>
+            <!--La ruleta y el botón-->
+            <section class="ruleta">
+                <div class="contenedorRuleta">
+                    <div class="puntero">&#9759;</div>
+                    <!--Cosas que se llenan con JavaScript-->
+                    <div class="ruedaRuleta" id="wheel"></div>
+                    <div class="centroRuleta"></div>
+                </div>
+                <div class="controles">
+                    <button id="spinButton" class="botonGirar">Que gire</button>
+                </div>
+            </section>
+            <!--Tablero de tareas-->
+            <section class="areaTablero">
+                <h2>Tareas</h2>
+                <!--Aquí se ponen las tareas con JavaScript-->
+                <div class="rejillasApuestas" id="grid"></div>
+            </section>
+        </main>
+        <!--Modal del ganador-->
+        <div id="winnerModal" class="modalInvisible">
+            <div class="contenidoModal">
+                <h2>Te tocó hacer...</h2>
+                <div id="winnerName">NombreTarea</div>
+                <div id="winnerNumber">#00</div>
+                <button id="closeModalPls">Vale</button>
+            </div>
+        </div>
+        <script src="magia.js" defer></script>
+    </body>
+</html>

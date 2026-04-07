@@ -1,0 +1,76 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="biblioteca_musical">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cancion" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="titulo" type="xs:string"/>
+                            <xs:element name="artista">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombre" type="xs:string"/>
+                                        <xs:element name="pais_origen" type="xs:string"/>
+                                        <xs:element name="genero_principal" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="album" type="xs:string"/>
+                            <xs:element name="ano_lanzamiento">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:int">
+                                        <xs:pattern value="\d{4}"/>
+                                        <xs:minInclusive value="1900"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="duracion" type="xs:int"/>
+                            <xs:element name="genero">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Rock"/>
+                                        <xs:enumeration value="Pop"/>
+                                        <xs:enumeration value="Hip-Hop"/>
+                                        <xs:enumeration value="Electrónica"/>
+                                        <xs:enumeration value="Jazz"/>
+                                        <xs:enumeration value="Clásica"/>
+                                        <xs:enumeration value="Otros"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:string" use="required" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="listas">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="lista" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="titulo" type="xs:string"/>
+                                        <xs:element name="descripcion" type="xs:string"/>
+                                        <xs:element name="canciones">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="cancionlista" minOccurs="2" maxOccurs="20">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:int">
+                                                                <xs:pattern value="\d{8}"/>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="duracionTotal" type="xs:int" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de XML de Clientes</title>
+    <link rel="Stylesheet" href="formulario.css">
+    <script type="text/javascript"></script><link rel="stylesheet" type="text/css"/><script type="text/javascript"></script><script type="text/javascript"></script>
+</head>
+<body>
+    <h1>Generador de XML de Clientes</h1>
+    <form id="clienteForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{9}">
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" name="dni" required pattern="[0-9]{8}[A-Za-z]">
+        <button type="submit"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.freepik.com%2Fpremium-photo%2Fdoner-kebab-doner-kebap-slice-fast-food-flatbread-with-french-fries-wooden-board_770123-1302.jpg%3Fw%3D1380&f=1&nofb=1&ipt=108f1c998c5a9ed3f2fff636563cff615f49a36a4f0cea7133dcf50984c7defe" width="250" height="25"></button>
+    </form>
+    <h2>Clientes Añadidos:</h2>
+    <div id="clientesList"></div> 
+    <h2>XML Generado:</h2>
+    <textarea id="xmlOutput" rows="15" readonly aria-live="polite"></textarea>
+    <script>
+        let clientes = [];
+        function escapeXml(unsafe) {
+            return unsafe.replace(/[<>&'"]/g, function (c) {
+                switch (c) {
+                    case '<': return '&lt;';
+                    case '>': return '&gt;';
+                    case '&': return '&amp;';
+                    case "'": return '&apos;';
+                    case '"': return '&quot;';
+                }
+            });
+        }
+        function actualizarXML() {
+            let xml = '<clientes>\n';
+            clientes.forEach(cliente => {
+                xml += `  <cliente DNI="${cliente.dni}">\n`;
+                xml += `    <nombre>${cliente.nombre}</nombre>\n`;
+                xml += `    <apellido>${cliente.apellido}</apellido>\n`;
+                xml += `    <telefono>${cliente.telefono}</telefono>\n`;
+                xml += `  </cliente>\n`;
+            });
+            xml += '</clientes>';
+            document.getElementById('xmlOutput').value = xml;
+        }
+        function mostrarClientes() {
+            const listaClientes = document.getElementById('clientesList');
+            listaClientes.innerHTML = '';
+            clientes.forEach((cliente, index) => {
+                const clienteDiv = document.createElement('div');
+                clienteDiv.className = 'cliente-item';
+                clienteDiv.innerHTML = `
+                    <strong>${cliente.nombre} ${cliente.apellido}</strong><br>
+                    DNI: ${cliente.dni}, Tel: ${cliente.telefono}
+                    <button onclick="eliminarCliente(${index})">Eliminar</button>
+                `;
+                listaClientes.appendChild(clienteDiv);
+            });
+        }
+        function eliminarCliente(index) {
+            clientes.splice(index, 1);
+            mostrarClientes();
+            actualizarXML();
+        }
+        document.getElementById('clienteForm').addEventListener('submit', function(event) {
+            event.preventDefault();   
+            const cliente = {
+                nombre: escapeXml(document.getElementById('nombre').value),
+                apellido: escapeXml(document.getElementById('apellido').value),
+                telefono: escapeXml(document.getElementById('telefono').value),
+                dni: escapeXml(document.getElementById('dni').value)
+            };
+            clientes.push(cliente);
+            mostrarClientes();
+            actualizarXML();
+            this.reset();
+        });
+    </script>
+</body>
+</html>
