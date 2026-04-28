@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Gaceta Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main class="contenedor">
+        <header class="encabezado">
+            <div class="contenedor-logo">
+                <img src="img/Daily-Bugle-Logo.png" alt="Logo" class="imagencabecera">
+            </div>
+            <p class="subtitulo">Las últimas noticias del mundo</p>
+            <button id="boton-cargar">Mostrar Noticias</button>
+            <button id="boton-eliminar">Eliminar Noticias</button>
+        </header>
+        <section id="lista-noticias">
+            <!-- <article class="tarjeta-noticia">
+                <h2>El rover Perseverance halla rocas inusuales en Marte</h2>
+                <p>Los científicos de la NASA analizan muestras que podrían indicar actividad hidrotermal pasada en el
+                    planeta rojo.</p>
+            </article>-->
+        </section>
+        <section id="publi-noticias">
+                <h2>Publicar nueva noticia</h2>
+                <input type="text" id="inTitulo" placeholder="Título de la noticia"><br><br>
+                <textarea id="inNoticia" rows="5" cols="50" placeholder="Contenido de la noticia..."></textarea><br><br>
+                <h2>Publicar como...</h2>
+                <button class="btnAutor">Pedro Parques</button><button class="btnAutor">Claro Kent</button><button class="btnAutor">Luisa Carril</button>
+        </section>
+    </main>
+    
+</body>
+
+</html>
